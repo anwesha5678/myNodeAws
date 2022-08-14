@@ -1,16 +1,21 @@
 const express = require('express')
 const app = express()
 require('dotenv')
-let port = process.env.PORT || 3900
-
-
-app.get('/', async (req, res) => {
-    res.send('GET request to homepage')
-})
+let port = process.env.PORT || 8080
 
 
 
 
-app.listen(() => {
-    console.log(`Server Listen To The Port:${port}`)
-})
+
+
+
+
+
+app.get('/', async(req, res)=> {
+    res.send('Hello World')
+  })
+
+
+  app.listen(port, function() {
+    console.log(`listening on: ${port}`)
+  })
